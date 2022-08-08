@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import './styles/LoadingScreen.css'
 import{HashRouter, Routes, Route} from 'react-router-dom'
 import {Home, Login, ProductDetail, Purchases} from './pages'
 import {NavBar, LoadingScreen} from './components'
