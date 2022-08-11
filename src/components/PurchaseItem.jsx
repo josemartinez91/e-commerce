@@ -5,7 +5,7 @@ const PurchaseItem = ({ purchase }) => {
 
     const [purchases, setPurchases] = useState(purchase.cart.products)
 
-    console.log(purchase)
+   
 
 
 
@@ -14,7 +14,7 @@ const PurchaseItem = ({ purchase }) => {
             <div className='list-container'>
                 {/* <h2>{purchase.createdAt}</h2> */}
                 {purchases.map(product => (
-                    <li className='list-item'>
+                    <li className='list-item' key={product.id}>
                         <div className='col-4'>
                             <p>{product.title}</p>
                         </div>

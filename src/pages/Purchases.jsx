@@ -12,7 +12,7 @@ const Purchases = () => {
     useEffect(()=>{
         dispatch(getPurchasesThunk())
     },[])
-    console.log(purchases)
+   
 
    
 
@@ -21,7 +21,7 @@ const Purchases = () => {
         <div className='main-container'>
             <h1>Purchases product</h1>
             {purchases.map(purchase=>(
-                <PurchaseItem purchase={purchase}/>
+                <PurchaseItem purchase={purchase} key={purchase.id}/>
             ))}
         </div>
     );

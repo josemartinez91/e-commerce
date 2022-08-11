@@ -1,4 +1,14 @@
-.App {
+/* .App {
+  text-align: center;
+} */
+* {
+  box-sizing: border-box;
+  color: #515151;
+  margin: 0;
+  padding: 0;
+}
+
+.txt-center {
   text-align: center;
 }
 
@@ -49,9 +59,10 @@
 .col-12 {
   width: 100%;
 }
+
 /* Loading Screen */
 
-.overlay{
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -67,6 +78,16 @@
 .nav-container {
   justify-content: flex-end;
   width: 100%;
+}
+
+.title-nav {
+  color: #f85555 !important;
+}
+
+.nav-burguer {
+  align-items: flex-end;
+  padding: 0 7rem;
+
 }
 
 /* HOME***************************************************** */
@@ -94,13 +115,13 @@
 .container-filter {
   display: flex;
   width: 100%;
-  display: none;
+  /* display: none; */
 }
 
 .container-filter-xs {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
+  /* display: flex; */
+  width: 90% !important;
+  /* justify-content: flex-end; */
   margin-bottom: 10%;
 }
 
@@ -110,11 +131,18 @@
 
 .accordion-item-home {
   border: none;
+  width: 10rem;
 }
 
 .button-search {
   background-color: #f85555;
   border: none;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -148,15 +176,29 @@
 
 .container-price {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding-top: 1rem;
+}
+
+.container-home-button {
+
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
 }
 
 /* PRODUCT DETAIL******************************************** */
 
+
+.image-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .main-image {
   margin-top: 15%;
-  width: 40%;
+  width: 150px;
 }
 
 .li-container {
@@ -166,6 +208,9 @@
 
 .options-image-item {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .options-image {
@@ -175,7 +220,7 @@
 .shop-button {
   background-color: #f85555;
   border: none;
-  width: 80%;
+  width: 280px;
   color: white;
   height: 3rem;
   margin-bottom: 20%;
@@ -188,6 +233,35 @@
 
 .image-button {
   width: 1rem;
+}
+
+.add-button {
+  width: 40px;
+  /* height: fit-content; */
+  background-color: white;
+  border: 1px solid gray;
+  justify-content: center;
+  display: flex;
+  align-content: center;
+  align-items: center;
+
+}
+
+.add-content {
+  width: 40px;
+  height: fit-content;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 0.09rem;
+}
+
+.add-image {
+  width: 50%;
+}
+
+.suggest-item {
+  list-style: none;
+  cursor: pointer;
 }
 
 /* PURCHASE ITEM ********************************************************************************* */
@@ -223,4 +297,130 @@
   align-content: center;
   text-align: center;
   margin: 7% 0;
+}
+
+/* LOGIN******************************************************************* */
+
+
+.login-main-container {
+  justify-content: center;
+  display: flex;
+  /* margin-top: 2rem; */
+  background: hsla(0, 1%, 72%, .1);
+}
+
+.login-form-container {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  /* height: 100vh; */
+  justify-content: center;
+  /* margin: 2rem 0; */
+}
+
+.form-login {
+  border-radius: 10px;
+  max-width: 400px;
+  padding: 25px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.test-data-container {
+  margin: 2rem 0;
+}
+
+.test-data {
+  background: #d8f5fd;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.test-data h3 {
+  text-align: center;
+}
+
+.login-button {
+  background-color: #f85555 !important;
+  border: none;
+  color: #fff;
+  width: 250px;
+  margin-bottom: 10%;
+  height: 40px;
+}
+
+.login-button-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+
+/* Footer ***************************************************************** */
+
+footer {
+  margin-top: 2rem;
+  background: #3c3c3b;
+  padding: 60px 0;
+  color: #fff;
+}
+
+footer .copyright {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+footer .social-networks {
+  text-align: center;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.image-footer {
+  width: 48px;
+}
+
+/* CartSide********************************************************************* */
+
+.li-sidebar {
+  list-style: none;
+  margin: 3rem 0;
+}
+
+.quantity {
+  border: 1px solid #dcd9d9;
+  border-radius: 3px;
+  height: 30px;
+  line-height: 1.8;
+  text-align: center;
+  width: 60px;
+}
+
+.li-sidebar p {
+  font-size: medium;
+  font-weight: 600;
+}
+
+.total-item {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-item span {
+  margin-right: 1rem;
+}
+
+.total-cart {
+  border-top: 1px solid #dcd9d9;
+  margin-bottom: 2rem;
+}
+
+.total-cart span {
+  margin-top: 1rem;
+}
+
+.total-cart b {
+  margin-top: 1rem;
+  margin-right: 1rem;
 }

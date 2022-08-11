@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import './App.css'
+import './styles/layout.css'
 import{HashRouter, Routes, Route} from 'react-router-dom'
 import {Home, Login, ProductDetail, Purchases} from './pages'
-import {NavBar, LoadingScreen} from './components'
+import {NavBar, LoadingScreen, ProtectedRoutes} from './components'
 import {useSelector} from 'react-redux'
+import Footer from './components/Footer'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,8 +24,12 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/product/:id' element={<ProductDetail/>}/>
           <Route path='/login' element={<Login/>}/>
-          <Route path='purchases' element={<Purchases/>}/>
+          <Route element={<ProtectedRoutes/>}>
+            <Route path='purchases' element={<Purchases/>}/>
+          </Route>
+          
         </Routes>
+        <Footer/>
       </HashRouter>
     </div>
   )
