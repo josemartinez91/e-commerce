@@ -52,7 +52,7 @@ const ProductDetail = () => {
 
     return (
         <div>
-            <div className='header-container-md'>
+            <div className='header-container-md product-container'>
                 <div className='image-container col-6-md'>
                     <img className='main-image' src={image == "" ? productDetail?.productImgs?.[0] : image} alt="" />
                     <ul className='li-container'>
