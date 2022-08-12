@@ -1,8 +1,9 @@
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { buyCartThunk, getCartThunk } from '../store/slices/cart.slice';
+import { buyCartThunk, deleteProductThunk, getCartThunk } from '../store/slices/cart.slice';
 import { useNavigate } from 'react-router-dom'
+import { deleteIcon, deleteImg } from '../img'
 
 
 const CartSidebar = ({ show, handleClose }) => {
@@ -22,7 +23,7 @@ const CartSidebar = ({ show, handleClose }) => {
 
     const totalItem = (price, quantity) => {
         return price * quantity
-        
+
     }
 
     const totalCart = () => {
@@ -30,9 +31,13 @@ const CartSidebar = ({ show, handleClose }) => {
             let itemTotal = 0
             itemTotal = element.price * element.productsInCart.quantity
             total += itemTotal
-            
+
         });
         return total
+    }
+
+    const deleteProduct = (id) => {
+        dispatch(deleteProductThunk(id))
     }
 
     return (
@@ -47,15 +52,25 @@ const CartSidebar = ({ show, handleClose }) => {
                         <li
 
                             className='li-sidebar'
-                            onClick={() => navigate(`/product/${productItem.id}`)}
-                            key={productItem.id}>
-                            <p>{productItem.title}</p>
-                            <div className='quantity'>{productItem.productsInCart.quantity}</div>
-                            <div className='total-item'>
-                                <span>Total: </span>
-                                <b>${totalItem(productItem.price, productItem.productsInCart.quantity)}</b>
 
+                            key={productItem.id}>
+                            <div>
+                                <button className='button-delete' onClick={() => deleteProduct(productItem.id)}>
+                                    <img className='' src={deleteIcon} alt="" />
+                                </button>
                             </div>
+                            <div onClick={() => navigate(`/product/${productItem.id}`)}>
+                                <p>{productItem.title}</p>
+                                <div className='quantity'>{productItem.productsInCart.quantity}</div>
+                                <div className='total-item'>
+                                    <span>Total: </span>
+                                    <b>${totalItem(productItem.price, productItem.productsInCart.quantity)}</b>
+
+                                </div>
+                            </div>
+
+
+
                         </li>
                     ))}
                 </ul>

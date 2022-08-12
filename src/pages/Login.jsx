@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import Card from 'react-bootstrap/Card';
+import SignUpForm from '../components/SignUpForm';
 
 const Login = () => {
 
@@ -59,6 +60,10 @@ const Login = () => {
                     </Form.Group>
                     <div className='login-button-container'>
                         <button type='submit' className='login-button txt-center'>Login</button>
+                    </div>
+
+                    <div>
+                        <span>Dont have a account, <button type='button' onClick={()=>navigate(<SignUpForm/>)}>SignUp</button></span>
                     </div>
 
                 </Form>

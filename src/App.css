@@ -383,6 +383,20 @@ footer .social-networks {
 
 /* CartSide********************************************************************* */
 
+
+.button-delete{
+  border: none;
+  background-color: transparent;
+  color: #f85555;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.button-delete img{
+  width: 20px;
+}
+
 .li-sidebar {
   list-style: none;
   margin: 3rem 0;
