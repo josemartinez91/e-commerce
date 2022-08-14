@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import Card from 'react-bootstrap/Card';
-import SignUpForm from '../components/SignUpForm';
+
 
 const Login = () => {
 
@@ -34,7 +34,7 @@ const Login = () => {
     return (
         <div className='col-12 login-main-container'>
 
-            <div className='login-form-container'>
+            <div className='login-form-container mt-3'>
 
 
                 <Form onSubmit={handleSubmit(submit)} className='form-login'>
@@ -63,7 +63,7 @@ const Login = () => {
                     </div>
 
                     <div>
-                        <span>Dont have a account, <button type='button' onClick={()=>navigate(<SignUpForm/>)}>SignUp</button></span>
+                        <span>Don't have a account, <button type='button' className='signup-button' onClick={()=>navigate('/signup')}>Sign Up</button></span>
                     </div>
 
                 </Form>

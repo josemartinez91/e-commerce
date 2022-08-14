@@ -189,10 +189,11 @@
 
 /* PRODUCT DETAIL******************************************** */
 
-.product-container{
+.product-container {
   margin: 3rem 0;
   padding-right: 2rem;
 }
+
 .image-container {
   align-items: center;
   display: flex;
@@ -316,7 +317,8 @@
   width: 40px;
   height: 30px;
 }
-.quantity-container{
+
+.quantity-container {
   display: flex;
   justify-content: center;
 }
@@ -374,6 +376,13 @@
 .login-button-container {
   text-align: center;
   margin: 2rem 0;
+}
+
+.signup-button {
+  background: transparent;
+  color: #2fa8f8;
+  font-size: inherit;
+  border: none;
 }
 
 

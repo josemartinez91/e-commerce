@@ -2,10 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import './styles/layout.css'
 import{HashRouter, Routes, Route} from 'react-router-dom'
-import {Home, Login, ProductDetail, Purchases} from './pages'
+import {Home, Login, ProductDetail, Purchases, SignUp } from './pages'
 import {NavBar, LoadingScreen, ProtectedRoutes} from './components'
 import {useSelector} from 'react-redux'
 import Footer from './components/Footer'
+
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/product/:id' element={<ProductDetail/>}/>
           <Route path='/login' element={<Login/>}/>
+          <Route path='/signup' element={<SignUp/>}/>
           <Route element={<ProtectedRoutes/>}>
             <Route path='purchases' element={<Purchases/>}/>
           </Route>
